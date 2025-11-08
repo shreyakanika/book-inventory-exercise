@@ -1,4 +1,4 @@
-## Book List Application (React + Node.js API)
+## Book Inventory Application (React + Node.js API)
 
 This project consists of a React frontend and a simple Node.js Express backend using in-memory data for a dynamic book list. The frontend fetches and posts data to the backend via a REST API.
 
@@ -58,7 +58,7 @@ From the directory containing docker-compose.yml, run the following command. Thi
 
 1. Backend API: Running inside the container at port 3002. You can access it from your host machine at http://localhost:3002/api/books.
 
-2. Frontend App: For this specific setup, you should view the rendered App.jsx in your environment, which will automatically communicate with the backend service name resolved by Docker Compose.
+2. Frontend App: For this specific setup, you should view the rendered `App.js` in your environment, which will automatically communicate with the backend service name resolved by Docker Compose.
 
 **Step 3: Stop the Services**
 
