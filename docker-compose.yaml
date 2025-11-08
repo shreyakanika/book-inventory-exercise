@@ -1,0 +1,31 @@
+version: '3.8'
+
+networks:
+  mynetwork:
+
+services:
+  backend:
+    container_name: book_api_backend
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    ports:
+      - "3002:3002"
+    networks:
+      - mynetwork
+    restart: unless-stopped
+  
+  frontend:
+    container_name: book_app_frontend
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    networks:
+      - mynetwork
+    environment:
+      REACT_APP_API_HOST : "http://localhost:3002"
+    restart: unless-stopped

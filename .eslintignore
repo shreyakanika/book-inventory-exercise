@@ -1,0 +1,11 @@
+build/
+dist/
+node_modules/
+*.log
+*.json
+*.md
+*.css
+*.html
+src-2/
+src-3/
+*.test.js

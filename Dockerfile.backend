@@ -1,0 +1,15 @@
+FROM node:20-alpine
+
+WORKDIR /usr/src/app
+
+COPY package*.json ./
+
+RUN npm install express cors
+RUN npm install
+
+COPY ./server/server_books.js .
+COPY . .
+
+EXPOSE 3002
+
+CMD ["node", "server_books.js"]
